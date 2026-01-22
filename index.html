@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux AMM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <h1>Flux Swap</h1>
+        <button onclick="connectWallet()" id="connectBtn">Connect Wallet</button>
+        <p id="userAddress">Not Connected</p>
+        <hr>
+        
+        <h3>ETH Balance: <span id="ethBalance">0</span></h3>
+        <h3>FLUX Balance: <span id="fluxBalance">0</span></h3>
+        
+        <hr>
+        
+        <input type="number" id="swapAmount" placeholder="ETH amount to swap">
+        <button onclick="swapEthToFlux()" id="swapBtn">Swap ETH for Flux</button>
+
+        <hr>
+
+        <input type="number" id="liqEth" placeholder="ETH to add">
+        <input type="number" id="liqFlux" placeholder="Flux to add">
+        <button onclick="addLiquidity()" id="liqBtn">Add Liquidity</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <script src="connect.js"></script>
+</body>
+</html>
